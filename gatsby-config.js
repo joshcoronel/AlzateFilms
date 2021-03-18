@@ -2,9 +2,9 @@ require(`dotenv`).config();
 
 module.exports = {
   siteMetadata: {
-    title: `GraphCMS SWAG Store`,
-    description: `Super cool SWAG from your favourite GraphQL CMS!`,
-    siteUrl: `https://store.graphcms.com`,
+    title: `AlzateFilms Swag`,
+    description: `Super cool SWAG from a YouTube Failure!`,
+    siteUrl: `https://alzatefilms.com`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
