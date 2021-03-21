@@ -14,14 +14,6 @@ fragment Product on Product {
       text
     }
   }
-  price
-  images {
-    ... on Asset {
-      remoteTypeName: __typename
-      remoteId: id
-      locale
-    }
-  }
   printfulProductId
   collections {
     ... on Collection {
