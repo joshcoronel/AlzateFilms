@@ -59,6 +59,15 @@ function Header({ pathname }) {
                 to="/"
                 className="text-lightgray hover:text-slategray hover:bg-gainsboro rounded-full py-2 px-3 font-medium"
               >
+                Home
+              </LocaleLink>
+            </li>
+
+            <li className="block my-4 md:inline-block md:my-0">
+              <LocaleLink
+                to="/catalog"
+                className="text-lightgray hover:text-slategray hover:bg-gainsboro rounded-full py-2 px-3 font-medium"
+              >
                 Catalog
               </LocaleLink>
             </li>

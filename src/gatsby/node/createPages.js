@@ -27,6 +27,14 @@ const createPages = async ({ graphql, actions: { createPage } }) => {
   locales.map(locale => {
     createPage({
       path: buildLocalePath({ locale, path: `/` }),
+      component: require.resolve(`../../templates/HomePage.js`),
+      context: {
+        locale: locale.path,
+      },
+    });
+
+    createPage({
+      path: buildLocalePath({ locale, path: `/catalog` }),
       component: require.resolve(`../../templates/ProductsPage.js`),
       context: {
         locale: locale.path,
