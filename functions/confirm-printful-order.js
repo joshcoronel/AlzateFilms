@@ -1,6 +1,7 @@
-require(`dotenv`).config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
+
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
 

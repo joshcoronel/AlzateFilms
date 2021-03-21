@@ -2,6 +2,8 @@ node_modules
 public
 .cache
 .env
-.env.*
+.env.development
+.env.production
+
 # Local Netlify folder
 .netlify
