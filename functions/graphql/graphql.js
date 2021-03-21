@@ -1,4 +1,6 @@
-require('dotenv').config();
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 const { ApolloServer } = require('apollo-server-lambda');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
