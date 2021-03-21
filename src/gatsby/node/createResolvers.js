@@ -45,9 +45,10 @@ const createResolvers = ({
       formattedPrice: {
         type: `String!`,
         resolve: ({ retail_price }, args, context, info) => {
-          return new Intl.NumberFormat('de-DE', {
+          console.log(retail_price);
+          return new Intl.NumberFormat('us-EN', {
             style: 'currency',
-            currency: 'EUR',
+            currency: 'USD',
           }).format(retail_price / 100);
         },
       },

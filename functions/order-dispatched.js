@@ -1,5 +1,6 @@
-require('dotenv').config();
-
+require(`dotenv`).config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 const { ServerClient: PostmarkClient } = require('postmark');
 
 const postmark = new PostmarkClient(process.env.POSTMARK_API_KEY);

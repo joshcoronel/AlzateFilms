@@ -41,6 +41,18 @@ const createOrderMutation = gql`
   }
 `;
 
+const createProductMutation = gql`
+  mutation createProduct($name: String!, $printfulProductId: String!) {
+    createProduct(
+      data: { name: $name, printfulProductId: $printfulProductId }
+    ) {
+      id
+      name
+      printfulProductId
+    }
+  }
+`;
+
 const submitReviewMutation = gql`
   mutation submitReview(
     $name: String!
@@ -97,6 +109,18 @@ class GraphCMSAPI extends GraphQLDataSource {
       const { data } = await this.mutation(createOrderMutation, { variables });
 
       return data.createOrder;
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  async createProduct(variables) {
+    try {
+      const { data } = await this.mutation(createProductMutation, {
+        variables,
+      });
+
+      return data.createProduct;
     } catch (err) {
       console.error(err);
     }
