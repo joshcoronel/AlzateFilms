@@ -4,9 +4,9 @@ import Img from 'gatsby-image';
 function CheckoutItem({ id, name, quantity, price, image }) {
   const total = quantity * price;
 
-  const formattedLineTotal = new Intl.NumberFormat('de-DE', {
+  const formattedLineTotal = new Intl.NumberFormat('us-EN', {
     style: 'currency',
-    currency: 'EUR',
+    currency: 'USD',
   }).format(total / 100);
 
   return (

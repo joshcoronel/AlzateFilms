@@ -106,8 +106,9 @@ class GraphCMSAPI extends GraphQLDataSource {
 
   async createOrder(variables) {
     try {
+      console.log(variables);
       const { data } = await this.mutation(createOrderMutation, { variables });
-
+      console.log(data);
       return data.createOrder;
     } catch (err) {
       console.error(err);
