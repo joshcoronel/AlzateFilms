@@ -1,7 +1,9 @@
 const checkoutResolver = async (_, { input }, { dataSources }) => {
   try {
-    let res = await dataSources.GraphCMSAPI.createOrder(input);
-    console.log(res);
+    const { id: graphCMSOrderId } = await dataSources.GraphCMSAPI.createOrder(
+      input
+    );
+
     const {
       country: country_code,
       state: state_code,

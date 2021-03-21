@@ -9,7 +9,6 @@ fragment Order on Order {
   phone
   fulfilled
   total
-  totalPaid
   orderItems {
     ... on OrderItem {
       remoteTypeName: __typename

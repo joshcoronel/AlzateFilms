@@ -11,13 +11,6 @@ fragment Asset on Asset {
   width
   size
   mimeType
-  imagesProduct {
-    ... on Product {
-      remoteTypeName: __typename
-      remoteId: id
-      locale
-    }
-  }
   collectionPhoto {
     ... on Collection {
       remoteTypeName: __typename
