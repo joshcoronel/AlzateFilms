@@ -3,7 +3,7 @@ import { useCart } from 'react-use-cart';
 import { navigate } from 'gatsby';
 
 import { CheckoutProvider } from '../context/Checkout';
-import CheckoutForm from '../components/CheckoutForm';
+import CheckoutForm from './CheckoutForm';
 import CheckoutItemList from './CheckoutItemList';
 
 function Checkout() {
